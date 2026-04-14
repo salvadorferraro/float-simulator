@@ -114,13 +114,13 @@ with col_a:
                 <div style="font-size:14px; color:#5F5E5A;">Brasil (CDI {r_br:.2f}%)</div>
                 <div style="font-size:34px; font-weight:600; color:#0F6E56;">{sign_usd(pnl_a_br)}</div>
                 <div style="font-size:13px; color:#0F6E56;">carry {sign_usd(carry_br_a)} + FX spread {sign_usd(fx_spread_usd)}</div>
-                <div style="font-size:13px; color:#5F5E5A;">{eff_a_br:.4f}% ef. {days}d</div>
+                <div style="font-size:28px; font-weight:600; color:#0F6E56;">{eff_a_br:.4f}%</div><div style="font-size:13px; color:#5F5E5A;">tasa ef. {days}d</div>
             </div>
             <div>
                 <div style="font-size:14px; color:#5F5E5A;">Mexico (TIIE {r_mx:.2f}%)</div>
                 <div style="font-size:34px; font-weight:600; color:#185FA5;">{sign_usd(pnl_a_mx)}</div>
                 <div style="font-size:13px; color:#185FA5;">carry {sign_usd(carry_mx_a)} + FX spread {sign_usd(fx_spread_usd)}</div>
-                <div style="font-size:13px; color:#5F5E5A;">{eff_a_mx:.4f}% ef. {days}d</div>
+                <div style="font-size:28px; font-weight:600; color:#185FA5;">{eff_a_mx:.4f}%</div><div style="font-size:13px; color:#5F5E5A;">tasa ef. {days}d</div>
             </div>
         </div>
     </div>
