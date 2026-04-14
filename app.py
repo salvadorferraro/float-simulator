@@ -105,19 +105,19 @@ st.markdown(f"""
     </p>
     <div style="display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
         <div>
-            <div style="font-size:11px; color:#0F6E56; margin-bottom:4px;">Brasil (CDI {r_br:.2f}% a.a.)</div>
+            <div style="font-size:14px; font-weight:500; color:#0F6E56; margin-bottom:4px;">Brasil (CDI {r_br:.2f}% a.a.)</div>
             <span style="font-size:32px; font-weight:600; color:#0F6E56;">{eff_br:.4f}%</span>
-            <span style="font-size:13px; color:#0F6E56; margin-left:10px;">spread: {spread_br_pct:+.4f}% / {spread_br_bps:+.1f} bps</span>
+            <span style="font-size:13px; color:#0F6E56; margin-left:10px;">vs benchmark: {spread_br_pct:+.4f}% / {spread_br_bps:+.1f} bps</span>
         </div>
         <div style="width:1px; background:#9FE1CB; align-self:stretch;"></div>
         <div>
-            <div style="font-size:11px; color:#185FA5; margin-bottom:4px;">México (TIIE {r_mx:.2f}% a.a.)</div>
+            <div style="font-size:14px; font-weight:500; color:#185FA5; margin-bottom:4px;">México (TIIE {r_mx:.2f}% a.a.)</div>
             <span style="font-size:32px; font-weight:600; color:#185FA5;">{eff_mx:.4f}%</span>
-            <span style="font-size:13px; color:#185FA5; margin-left:10px;">spread: {spread_mx_pct:+.4f}% / {spread_mx_bps:+.1f} bps</span>
+            <span style="font-size:13px; color:#185FA5; margin-left:10px;">vs benchmark: {spread_mx_pct:+.4f}% / {spread_mx_bps:+.1f} bps</span>
         </div>
         <div style="width:1px; background:#9FE1CB; align-self:stretch;"></div>
         <div>
-            <div style="font-size:11px; color:#888780; margin-bottom:4px;">USD benchmark ({r_usd:.2f}% a.a.)</div>
+            <div style="font-size:14px; font-weight:500; color:#888780; margin-bottom:4px;">USD benchmark ({r_usd:.2f}% a.a.)</div>
             <span style="font-size:32px; font-weight:600; color:#888780;">{eff_usd:.4f}%</span>
             <span style="font-size:13px; color:#888780; margin-left:10px;">base de comparación</span>
         </div>
@@ -247,4 +247,3 @@ st.caption(
     "México TIIE fondeo ~6,75% (Banxico mar-2026) · USD benchmark 4,00%. "
     "Simulador informativo — confirmar tasas y spreads FX con tesorería."
 )
-
