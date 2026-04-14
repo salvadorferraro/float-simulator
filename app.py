@@ -103,24 +103,24 @@ col_a, col_b = st.columns(2)
 with col_a:
     st.markdown(f"""
     <div style="background:#E1F5EE; border:0.5px solid #9FE1CB; border-radius:12px; padding:20px 24px; height:100%;">
-        <div style="font-size:11px; color:#5F5E5A; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:8px;">
+        <div style="font-size:13px; color:#5F5E5A; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:8px;">
             Estrategia A — Invertir en moneda local
         </div>
-        <div style="font-size:12px; color:#0F6E56; margin-bottom:16px;">
+        <div style="font-size:14px; color:#0F6E56; margin-bottom:16px;">
             Recibis BRL/MXN → invertis local → cliente convierte al dia {days} → cobras FX spread · Sin riesgo cambiario
         </div>
         <div style="display:flex; gap:32px;">
             <div>
-                <div style="font-size:12px; color:#5F5E5A;">Brasil (CDI {r_br:.2f}%)</div>
-                <div style="font-size:30px; font-weight:600; color:#0F6E56;">{sign_usd(pnl_a_br)}</div>
-                <div style="font-size:11px; color:#0F6E56;">carry {sign_usd(carry_br_a)} + FX spread {sign_usd(fx_spread_usd)}</div>
-                <div style="font-size:11px; color:#5F5E5A;">{eff_a_br:.4f}% ef. {days}d</div>
+                <div style="font-size:14px; color:#5F5E5A;">Brasil (CDI {r_br:.2f}%)</div>
+                <div style="font-size:34px; font-weight:600; color:#0F6E56;">{sign_usd(pnl_a_br)}</div>
+                <div style="font-size:13px; color:#0F6E56;">carry {sign_usd(carry_br_a)} + FX spread {sign_usd(fx_spread_usd)}</div>
+                <div style="font-size:13px; color:#5F5E5A;">{eff_a_br:.4f}% ef. {days}d</div>
             </div>
             <div>
-                <div style="font-size:12px; color:#5F5E5A;">Mexico (TIIE {r_mx:.2f}%)</div>
-                <div style="font-size:30px; font-weight:600; color:#185FA5;">{sign_usd(pnl_a_mx)}</div>
-                <div style="font-size:11px; color:#185FA5;">carry {sign_usd(carry_mx_a)} + FX spread {sign_usd(fx_spread_usd)}</div>
-                <div style="font-size:11px; color:#5F5E5A;">{eff_a_mx:.4f}% ef. {days}d</div>
+                <div style="font-size:14px; color:#5F5E5A;">Mexico (TIIE {r_mx:.2f}%)</div>
+                <div style="font-size:34px; font-weight:600; color:#185FA5;">{sign_usd(pnl_a_mx)}</div>
+                <div style="font-size:13px; color:#185FA5;">carry {sign_usd(carry_mx_a)} + FX spread {sign_usd(fx_spread_usd)}</div>
+                <div style="font-size:13px; color:#5F5E5A;">{eff_a_mx:.4f}% ef. {days}d</div>
             </div>
         </div>
     </div>
@@ -131,22 +131,22 @@ with col_b:
     fx_label = "BRL se deprecio, ganas" if fx_move > 0 else "BRL se aprecio, pierdes" if fx_move < 0 else "Sin movimiento FX"
     st.markdown(f"""
     <div style="background:#E6F1FB; border:0.5px solid #B5D4F4; border-radius:12px; padding:20px 24px; height:100%;">
-        <div style="font-size:11px; color:#5F5E5A; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:8px;">
+        <div style="font-size:13px; color:#5F5E5A; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:8px;">
             Estrategia B — Convertir en dia 0 e invertir en USD
         </div>
-        <div style="font-size:12px; color:#185FA5; margin-bottom:16px;">
+        <div style="font-size:14px; color:#185FA5; margin-bottom:16px;">
             Recibis BRL/MXN → convertis a USD en dia 0 → invertis en USD → asumis riesgo FX
         </div>
         <div style="display:flex; gap:32px;">
             <div>
-                <div style="font-size:12px; color:#5F5E5A;">P&L total (USD {r_usd:.2f}%)</div>
-                <div style="font-size:30px; font-weight:600; color:{pnl_b_color};">{sign_usd(pnl_b)}</div>
-                <div style="font-size:11px; color:#185FA5;">carry {sign_usd(carry_usd_b)} + P&L FX {sign_usd(fx_pnl_b)}</div>
-                <div style="font-size:11px; color:#5F5E5A;">{eff_b:.4f}% ef. {days}d</div>
+                <div style="font-size:14px; color:#5F5E5A;">P&L total (USD {r_usd:.2f}%)</div>
+                <div style="font-size:34px; font-weight:600; color:{pnl_b_color};">{sign_usd(pnl_b)}</div>
+                <div style="font-size:13px; color:#185FA5;">carry {sign_usd(carry_usd_b)} + P&L FX {sign_usd(fx_pnl_b)}</div>
+                <div style="font-size:13px; color:#5F5E5A;">{eff_b:.4f}% ef. {days}d</div>
             </div>
             <div style="margin-top:24px;">
-                <div style="font-size:11px; color:#5F5E5A;">FX move: <strong>{fx_move:+.1f}%</strong></div>
-                <div style="font-size:11px; color:{pnl_b_color}; margin-top:4px;">{fx_label}</div>
+                <div style="font-size:13px; color:#5F5E5A;">FX move: <strong>{fx_move:+.1f}%</strong></div>
+                <div style="font-size:13px; color:{pnl_b_color}; margin-top:4px;">{fx_label}</div>
             </div>
         </div>
     </div>
