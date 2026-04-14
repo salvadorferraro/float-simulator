@@ -142,7 +142,7 @@ with col_b:
                 <div style="font-size:14px; color:#5F5E5A;">P&L total (USD {r_usd:.2f}%)</div>
                 <div style="font-size:34px; font-weight:600; color:{pnl_b_color};">{sign_usd(pnl_b)}</div>
                 <div style="font-size:13px; color:#185FA5;">carry {sign_usd(carry_usd_b)} + P&L FX {sign_usd(fx_pnl_b)}</div>
-                <div style="font-size:13px; color:#5F5E5A;">{eff_b:.4f}% ef. {days}d</div>
+                <div style="font-size:28px; font-weight:600; color:{pnl_b_color};">{eff_b:.4f}%</div><div style="font-size:13px; color:#5F5E5A;">tasa ef. {days}d</div>
             </div>
             <div style="margin-top:24px;">
                 <div style="font-size:13px; color:#5F5E5A;">FX move: <strong>{fx_move:+.1f}%</strong></div>
