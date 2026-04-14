@@ -94,35 +94,32 @@ spread_mx_bps = spread_mx_pct * 100
 
 st.markdown(f"""
 <div style="
-    background: linear-gradient(135deg, #E1F5EE 0%, #E6F1FB 100%);
+    background: #E1F5EE;
     border-radius: 12px;
     padding: 20px 28px;
     margin-bottom: 1.5rem;
     border: 0.5px solid #9FE1CB;
 ">
     <p style="margin:0 0 12px 0; font-size:12px; color:#5F5E5A; font-weight:500; letter-spacing:0.05em; text-transform:uppercase;">
-        Spread ganado sobre benchmark USD — {days} día{'s' if days != 1 else ''} · ${capital:,.0f}
+        Tasa efectiva del período — {days} día{'s' if days != 1 else ''} · ${capital:,.0f}
     </p>
     <div style="display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
         <div>
             <div style="font-size:11px; color:#0F6E56; margin-bottom:4px;">Brasil (CDI {r_br:.2f}% a.a.)</div>
-            <span style="font-size:32px; font-weight:600; color:#0F6E56;">{spread_br_pct:+.4f}%</span>
-            <span style="font-size:16px; color:#0F6E56; margin-left:10px; font-weight:500;">{spread_br_bps:+.1f} bps</span>
-            <div style="font-size:11px; color:#5F5E5A; margin-top:2px;">Tasa ef. {days}d: {eff_br:.4f}%</div>
+            <span style="font-size:32px; font-weight:600; color:#0F6E56;">{eff_br:.4f}%</span>
+            <span style="font-size:13px; color:#0F6E56; margin-left:10px;">spread: {spread_br_pct:+.4f}% / {spread_br_bps:+.1f} bps</span>
         </div>
         <div style="width:1px; background:#9FE1CB; align-self:stretch;"></div>
         <div>
             <div style="font-size:11px; color:#185FA5; margin-bottom:4px;">México (TIIE {r_mx:.2f}% a.a.)</div>
-            <span style="font-size:32px; font-weight:600; color:#185FA5;">{spread_mx_pct:+.4f}%</span>
-            <span style="font-size:16px; color:#185FA5; margin-left:10px; font-weight:500;">{spread_mx_bps:+.1f} bps</span>
-            <div style="font-size:11px; color:#5F5E5A; margin-top:2px;">Tasa ef. {days}d: {eff_mx:.4f}%</div>
+            <span style="font-size:32px; font-weight:600; color:#185FA5;">{eff_mx:.4f}%</span>
+            <span style="font-size:13px; color:#185FA5; margin-left:10px;">spread: {spread_mx_pct:+.4f}% / {spread_mx_bps:+.1f} bps</span>
         </div>
         <div style="width:1px; background:#9FE1CB; align-self:stretch;"></div>
         <div>
             <div style="font-size:11px; color:#888780; margin-bottom:4px;">USD benchmark ({r_usd:.2f}% a.a.)</div>
             <span style="font-size:32px; font-weight:600; color:#888780;">{eff_usd:.4f}%</span>
-            <span style="font-size:16px; color:#888780; margin-left:10px; font-weight:500;">0 bps</span>
-            <div style="font-size:11px; color:#5F5E5A; margin-top:2px;">Base de comparación</div>
+            <span style="font-size:13px; color:#888780; margin-left:10px;">base de comparación</span>
         </div>
     </div>
 </div>
@@ -250,3 +247,4 @@ st.caption(
     "México TIIE fondeo ~6,75% (Banxico mar-2026) · USD benchmark 4,00%. "
     "Simulador informativo — confirmar tasas y spreads FX con tesorería."
 )
+
